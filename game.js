@@ -1,4 +1,3 @@
-
 let td1 = document.getElementById("td1");
 let td2 = document.getElementById("td2");
 let td3 = document.getElementById("td3");
@@ -15,37 +14,47 @@ let playerNum = document.getElementById("player-num");
 let player;
 let draw = 1;
 
-
-$("#b1").click(function() {
+// on select button1
+$("#b1").click(function () {
     player = "x";
     $(".selection").css("display", "none");
-    $(".game-table").css("display", "block");
+    $(".game-table").css("display", "flex");
+    $(".game-table").addClass("visible");
     playerNum.innerHTML = "player 1";
 })
 
-$("#b2").click(function() {
+// on select button2
+$("#b2").click(function () {
     player = "o";
     $(".selection").css("display", "none");
-    $(".game-table").css("display", "block");
+    $(".game-table").css("display", "flex");
+    $(".game-table").addClass("visible");
     playerNum.innerHTML = "player 1";
 })
 
-$("#td1").click(function() {
+
+// first block actions on click
+
+$("#td1").click(function () {
     if (td1.innerHTML == "") {
         if (playerNum.innerHTML == "player 1" && player == "x") {
             td1.innerHTML = "x";
+            td1.classList.add('animated-x')
             playerNum.innerHTML = "player 2";
             player = "o"
         } else if (playerNum.innerHTML == "player 1" && player == "o") {
             td1.innerHTML = "o";
+            td1.classList.add('animated-o')
             playerNum.innerHTML = "player 2";
             player = "x"
         } else if (playerNum.innerHTML == "player 2" && player == "x") {
             td1.innerHTML = "x";
+            td1.classList.add('animated-x')
             playerNum.innerHTML = "player 1";
             player = "o"
         } else if (playerNum.innerHTML == "player 2" && player == "o") {
             td1.innerHTML = "o";
+            td1.classList.add('animated-o')
             playerNum.innerHTML = "player 1";
             player = "x"
         }
@@ -54,22 +63,29 @@ $("#td1").click(function() {
     winnerCheck();
 })
 
-$("#td2").click(function() {
+
+// second block actions on click
+
+$("#td2").click(function () {
     if (td2.innerHTML == "") {
         if (playerNum.innerHTML == "player 1" && player == "x") {
             td2.innerHTML = "x";
+            td2.classList.add('animated-x')
             playerNum.innerHTML = "player 2";
             player = "o"
         } else if (playerNum.innerHTML == "player 1" && player == "o") {
             td2.innerHTML = "o";
+            td2.classList.add('animated-o')
             playerNum.innerHTML = "player 2";
             player = "x"
         } else if (playerNum.innerHTML == "player 2" && player == "x") {
             td2.innerHTML = "x";
+            td2.classList.add('animated-x')
             playerNum.innerHTML = "player 1";
             player = "o"
         } else if (playerNum.innerHTML == "player 2" && player == "o") {
             td2.innerHTML = "o";
+            td2.classList.add('animated-o')
             playerNum.innerHTML = "player 1";
             player = "x"
         }
@@ -78,22 +94,29 @@ $("#td2").click(function() {
     winnerCheck();
 })
 
-$("#td3").click(function() {
+
+// third block actions on click
+
+$("#td3").click(function () {
     if (td3.innerHTML == "") {
         if (playerNum.innerHTML == "player 1" && player == "x") {
             td3.innerHTML = "x";
+            td3.classList.add('animated-x')
             playerNum.innerHTML = "player 2";
             player = "o"
         } else if (playerNum.innerHTML == "player 1" && player == "o") {
             td3.innerHTML = "o";
+            td3.classList.add('animated-o')
             playerNum.innerHTML = "player 2";
             player = "x"
         } else if (playerNum.innerHTML == "player 2" && player == "x") {
             td3.innerHTML = "x";
+            td3.classList.add('animated-x')
             playerNum.innerHTML = "player 1";
             player = "o"
         } else if (playerNum.innerHTML == "player 2" && player == "o") {
             td3.innerHTML = "o";
+            td3.classList.add('animated-x')
             playerNum.innerHTML = "player 1";
             player = "x"
         }
@@ -102,22 +125,29 @@ $("#td3").click(function() {
     winnerCheck();
 })
 
-$("#td4").click(function() {
+
+// fourth block actions on click
+
+$("#td4").click(function () {
     if (td4.innerHTML == "") {
         if (playerNum.innerHTML == "player 1" && player == "x") {
             td4.innerHTML = "x";
+            td4.classList.add('animated-x')
             playerNum.innerHTML = "player 2";
             player = "o"
         } else if (playerNum.innerHTML == "player 1" && player == "o") {
             td4.innerHTML = "o";
+            td4.classList.add('animated-o')
             playerNum.innerHTML = "player 2";
             player = "x"
         } else if (playerNum.innerHTML == "player 2" && player == "x") {
             td4.innerHTML = "x";
+            td4.classList.add('animated-x')
             playerNum.innerHTML = "player 1";
             player = "o"
         } else if (playerNum.innerHTML == "player 2" && player == "o") {
             td4.innerHTML = "o";
+            td4.classList.add('animated-o')
             playerNum.innerHTML = "player 1";
             player = "x"
         }
@@ -126,22 +156,29 @@ $("#td4").click(function() {
     winnerCheck();
 })
 
-$("#td5").click(function() {
+
+// fifth block actions on click
+
+$("#td5").click(function () {
     if (td5.innerHTML == "") {
         if (playerNum.innerHTML == "player 1" && player == "x") {
             td5.innerHTML = "x";
+            td5.classList.add('animated-x')
             playerNum.innerHTML = "player 2";
             player = "o"
         } else if (playerNum.innerHTML == "player 1" && player == "o") {
             td5.innerHTML = "o";
+            td5.classList.add('animated-o')
             playerNum.innerHTML = "player 2";
             player = "x"
         } else if (playerNum.innerHTML == "player 2" && player == "x") {
             td5.innerHTML = "x";
+            td5.classList.add('animated-x')
             playerNum.innerHTML = "player 1";
             player = "o"
         } else if (playerNum.innerHTML == "player 2" && player == "o") {
             td5.innerHTML = "o";
+            td5.classList.add('animated-o')
             playerNum.innerHTML = "player 1";
             player = "x"
         }
@@ -150,22 +187,29 @@ $("#td5").click(function() {
     winnerCheck();
 })
 
-$("#td6").click(function() {
+
+// sixth block actions on click
+
+$("#td6").click(function () {
     if (td6.innerHTML == "") {
         if (playerNum.innerHTML == "player 1" && player == "x") {
             td6.innerHTML = "x";
+            td6.classList.add('animated-x')
             playerNum.innerHTML = "player 2";
             player = "o"
         } else if (playerNum.innerHTML == "player 1" && player == "o") {
             td6.innerHTML = "o";
+            td6.classList.add('animated-o')
             playerNum.innerHTML = "player 2";
             player = "x"
         } else if (playerNum.innerHTML == "player 2" && player == "x") {
             td6.innerHTML = "x";
+            td6.classList.add('animated-x')
             playerNum.innerHTML = "player 1";
             player = "o"
         } else if (playerNum.innerHTML == "player 2" && player == "o") {
             td6.innerHTML = "o";
+            td6.classList.add('animated-o')
             playerNum.innerHTML = "player 1";
             player = "x"
         }
@@ -174,22 +218,29 @@ $("#td6").click(function() {
     winnerCheck();
 })
 
-$("#td7").click(function() {
+
+// seventh block actions on click
+
+$("#td7").click(function () {
     if (td7.innerHTML == "") {
         if (playerNum.innerHTML == "player 1" && player == "x") {
             td7.innerHTML = "x";
+            td7.classList.add('animated-x')
             playerNum.innerHTML = "player 2";
             player = "o"
         } else if (playerNum.innerHTML == "player 1" && player == "o") {
             td7.innerHTML = "o";
+            td7.classList.add('animated-o')
             playerNum.innerHTML = "player 2";
             player = "x"
         } else if (playerNum.innerHTML == "player 2" && player == "x") {
             td7.innerHTML = "x";
+            td7.classList.add('animated-x')
             playerNum.innerHTML = "player 1";
             player = "o"
         } else if (playerNum.innerHTML == "player 2" && player == "o") {
             td7.innerHTML = "o";
+            td7.classList.add('animated-o')
             playerNum.innerHTML = "player 1";
             player = "x"
         }
@@ -198,22 +249,30 @@ $("#td7").click(function() {
     winnerCheck();
 })
 
-$("#td8").click(function() {
+
+
+// 8th block actions on click
+
+$("#td8").click(function () {
     if (td8.innerHTML == "") {
         if (playerNum.innerHTML == "player 1" && player == "x") {
             td8.innerHTML = "x";
+            td8.classList.add('animated-x')
             playerNum.innerHTML = "player 2";
             player = "o"
         } else if (playerNum.innerHTML == "player 1" && player == "o") {
             td8.innerHTML = "o";
+            td8.classList.add('animated-o')
             playerNum.innerHTML = "player 2";
             player = "x"
         } else if (playerNum.innerHTML == "player 2" && player == "x") {
             td8.innerHTML = "x";
+            td8.classList.add('animated-x')
             playerNum.innerHTML = "player 1";
             player = "o"
         } else if (playerNum.innerHTML == "player 2" && player == "o") {
             td8.innerHTML = "o";
+            td8.classList.add('animated-o')
             playerNum.innerHTML = "player 1";
             player = "x"
         }
@@ -222,22 +281,30 @@ $("#td8").click(function() {
     winnerCheck();
 })
 
-$("#td9").click(function() {
+
+
+// 9th block actions on click
+
+$("#td9").click(function () {
     if (td9.innerHTML == "") {
         if (playerNum.innerHTML == "player 1" && player == "x") {
             td9.innerHTML = "x";
+            td9.classList.add('animated-x')
             playerNum.innerHTML = "player 2";
             player = "o"
         } else if (playerNum.innerHTML == "player 1" && player == "o") {
             td9.innerHTML = "o";
+            td9.classList.add('animated-o')
             playerNum.innerHTML = "player 2";
             player = "x"
         } else if (playerNum.innerHTML == "player 2" && player == "x") {
             td9.innerHTML = "x";
+            td9.classList.add('animated-x')
             playerNum.innerHTML = "player 1";
             player = "o"
         } else if (playerNum.innerHTML == "player 2" && player == "o") {
             td9.innerHTML = "o";
+            td9.classList.add('animated-o')
             playerNum.innerHTML = "player 1";
             player = "x"
         }
@@ -246,78 +313,100 @@ $("#td9").click(function() {
     winnerCheck();
 })
 
+
+// winner check
 function winnerCheck() {
-    if(playerNum.innerHTML == "player 1"){
-            winnerTag.innerHTML = "Winner player 2";
-        }else if(playerNum.innerHTML == "player 2"){
-            winnerTag.innerHTML = "Winner player 1";
-        }
+    if (playerNum.innerHTML == "player 1") {
+        winnerTag.innerHTML = "Winner player 2";
+    } else if (playerNum.innerHTML == "player 2") {
+        winnerTag.innerHTML = "Winner player 1";
+    }
     if (td1.innerHTML == "x" && td2.innerHTML == "x" && td3.innerHTML == "x") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+        showWiner(td1, td2, td3)
     } else if (td1.innerHTML == "x" && td4.innerHTML == "x" && td7.innerHTML == "x") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+        showWiner(td4, td1, td7)
     } else if (td1.innerHTML == "x" && td5.innerHTML == "x" && td9.innerHTML == "x") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+        showWiner(td5, td1, td9)
     } else if (td2.innerHTML == "x" && td5.innerHTML == "x" && td8.innerHTML == "x") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+        showWiner(td5, td2, td8)
     } else if (td3.innerHTML == "x" && td6.innerHTML == "x" && td9.innerHTML == "x") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+        showWiner(td9, td3, td6)
     } else if (td4.innerHTML == "x" && td5.innerHTML == "x" && td6.innerHTML == "x") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+        showWiner(td5, td4, td6)
     } else if (td7.innerHTML == "x" && td8.innerHTML == "x" && td9.innerHTML == "x") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+
+        showWiner(td9, td8, td7)
     } else if (td3.innerHTML == "x" && td5.innerHTML == "x" && td7.innerHTML == "x") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+        showWiner(td5, td3, td7)
     } else if (td1.innerHTML == "o" && td2.innerHTML == "o" && td3.innerHTML == "o") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+        showWiner(td1, td2, td3)
     } else if (td1.innerHTML == "o" && td4.innerHTML == "o" && td7.innerHTML == "o") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+        showWiner(td1, td4, td7)
     } else if (td1.innerHTML == "o" && td5.innerHTML == "o" && td9.innerHTML == "o") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+        showWiner(td5, td1, td9)
     } else if (td2.innerHTML == "o" && td5.innerHTML == "o" && td8.innerHTML == "o") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+        showWiner(td5, td2, td8)
     } else if (td3.innerHTML == "o" && td6.innerHTML == "o" && td9.innerHTML == "o") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+        showWiner(td6, td3, td9)
     } else if (td4.innerHTML == "o" && td5.innerHTML == "o" && td6.innerHTML == "o") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+        showWiner(td5, td4, td6)
     } else if (td7.innerHTML == "o" && td8.innerHTML == "o" && td9.innerHTML == "o") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+        showWiner(td8, td9, td7)
+
     } else if (td3.innerHTML == "o" && td5.innerHTML == "o" && td7.innerHTML == "o") {
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
-    }else if(td1.innerHTML != "" && td2.innerHTML != "" && td3.innerHTML != "" && td4.innerHTML != "" && td5.innerHTML != "" && td6.innerHTML != "" && td7.innerHTML != "" && td8.innerHTML != "" && td9.innerHTML != ""){
-        $(".game-table").css("display","none");
-        $(".winner").css("display","block");
+
+        showWiner(td5, td3, td7)
+    } else if (td1.innerHTML != "" && td2.innerHTML != "" && td3.innerHTML != "" && td4.innerHTML != "" && td5.innerHTML != "" && td6.innerHTML != "" && td7.innerHTML != "" && td8.innerHTML != "" && td9.innerHTML != "") {
+        $(".game-table").css("display", "none");
+        $(".winner").css("display", "flex");
         draw = 2;
         winns(draw);
     }
-    
-   
-    
 }
 
-function winns(){
-    if(draw == 2){
-            console.log
-            winnerTag.innerHTML = "Match Draw Try Again!";
-            
-        }
+
+// show winner
+
+function showWiner(first, second, third) {
+    first.style.background = 'rgb(33, 233, 14)';
+    first.style.color = 'white';
+    second.style.background = 'rgb(33, 233, 14)';
+    second.style.color = 'white';
+    third.style.background = 'rgb(33, 233, 14)';
+    third.style.color = 'white';
+    $("#confetti").css("display", 'block');
+    setTimeout(() => {
+        $(".game-table").css("display", "none");
+        $(".winner").css("display", "flex");
+    }, 500);
 }
-function relode(){
-window.location.href = "index.php";
+
+// drow or not
+function winns() {
+    if (draw == 2) {
+        winnerTag.innerHTML = "Match Draw Try Again!";
+        winnerTag.style.fontSize = '25px'
+
+    }
+}
+
+
+
+// gane finisher
+
+function relode() {
+    window.location.href = "index.html";
 }

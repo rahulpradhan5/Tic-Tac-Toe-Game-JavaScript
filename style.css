@@ -1,0 +1,267 @@
+
+    body {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #14bdac;
+    }
+
+    .game-table,
+    .selection {
+        animation: fadeIn .5s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            /* Start with 0 opacity (completely transparent) */
+        }
+
+        to {
+            opacity: 1;
+            /* End with 1 opacity (completely opaque) */
+        }
+    }
+
+
+    td {
+        border: 2px solid rgb(84, 84, 84);
+
+    }
+
+    button {
+        animation: breath 1.5s ease-in-out infinite !important;
+        outline: none;
+        cursor: pointer;
+    }
+
+    h1,
+    h2 {
+        color: rgb(84, 84, 84);
+    }
+
+    @keyframes breath {
+        0% {
+            scale: 1;
+        }
+
+        50% {
+            scale: 1.1;
+        }
+
+        100% {
+            scale: 1;
+        }
+    }
+
+    .game-table {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 100px;
+        flex-direction: column;
+    }
+
+    table {
+        min-width: 200px;
+        min-height: 200px;
+        height: auto;
+        width: auto;
+    }
+
+    tr {
+        width: auto;
+        height: 60px;
+    }
+
+    td {
+        min-width: 60px;
+        min-height: 60px;
+        height: 60px;
+        width: 60px;
+    }
+
+    .selection {
+        margin: 150px;
+    }
+
+    .select {
+        display: flex;
+        justify-content: center;
+        column-gap: 50px;
+    }
+
+    .select button {
+        width: 80px;
+        height: 30px;
+        text-align: center;
+        font-size: medium;
+    }
+
+    .select button:hover {
+        background-color: wheat;
+        outline: none;
+
+    }
+
+    .game-table {
+        display: none;
+    }
+
+    .winner {
+        display: none;
+        position: absolute;
+        max-width: 300px;
+        max-height: 400px;
+        border-radius: 10px;
+        background-color: white;
+        left: 40%;
+        top: 20%;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .winner svg {
+        height: 150px;
+    }
+
+    .winner h1 {
+        color: rgb(21, 241, 32);
+    }
+
+    .winner button {
+        width: 80px;
+        height: 30px;
+        text-align: center;
+        font-size: medium;
+    }
+
+    .winner button:hover {
+        background-color: red;
+        color: white
+    }
+
+    #confetti {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -100;
+        display: none;
+    }
+
+    #td1,
+    #td4,
+    #td7 {
+        border-left: none !important;
+    }
+
+    #td1,
+    #td2,
+    #td3 {
+        border-top: none !important;
+    }
+
+    #td3,
+    #td6,
+    #td9 {
+        border-right: none !important;
+    }
+
+    #td7,
+    #td8,
+    #td9 {
+        border-bottom: none !important;
+    }
+
+    .animated-x {
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+
+    .animated-x::before,
+    .animated-x::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: #000;
+        top: 50%;
+        left: 0;
+        transform-origin: center;
+    }
+
+    .animated-x::before {
+        transform: rotate(45deg);
+        animation: animateX .5s linear alternate-reverse;
+    }
+
+    .animated-x::after {
+        transform: rotate(-45deg);
+        animation: animateX .5s linear alternate;
+    }
+
+    @keyframes animateX {
+        0% {
+            transform: rotate(45deg);
+        }
+
+        100% {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .animated-o {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background-color: #14bdac;
+    }
+
+    .animated-o::before,
+    .animated-o::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: #14bdac;
+        border: 4px solid black;
+        top: 10%;
+        left: 10%;
+        border-radius: 50%;
+        transform-origin: center;
+    }
+
+    .animated-o::before {
+        transform: rotate(45deg);
+        animation: animateO 1s linear alternate-reverse;
+    }
+
+    .animated-o::after {
+        transform: rotate(-45deg);
+        animation: animateO 1s linear alternate;
+    }
+
+    @keyframes animateO {
+        0% {
+            border-top: 1px solid black;
+        }
+
+        25% {
+            border-left: 1px solid black;
+        }
+
+        50% {
+            border-right: 1px solid black;
+        }
+
+        100% {
+            border-bottom: 1px solid black;
+        }
+
+    }
