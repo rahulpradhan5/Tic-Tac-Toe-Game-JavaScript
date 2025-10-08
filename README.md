@@ -8,17 +8,11 @@ A simple **Tic-Tac-Toe game** built using **JavaScript, HTML, and CSS**. Play wi
 ---
 
 ## Table of Contents
-- [Demo](#demo)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-
----
-
-## Demo
-Check out the live demo here: [O-Xgame Live Demo](https://rahulpradhan5.github.io/O-Xgame/)
 
 ---
 
